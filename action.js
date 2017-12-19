@@ -40,7 +40,7 @@ function thumbUpComment(id) {
     return {
         type: THUMB_UP_COMMENT,
         id,
-        up
+        rate: +1
     }
 }
 
@@ -48,7 +48,7 @@ function thumbDownComment(id) {
     return {
         type: THUMB_DOWN_COMMENT,
         id,
-        down
+        rate: -1
     }
 }
 
