@@ -7,11 +7,11 @@
 var uuid = require('uuid');
 // import uuid from uuid;
 
-const ADD_COMMENT = 'ADD_COMMENT';
-const EDIT_COMMENT = 'EDIT_COMMENT';
-const REMOVE_COMMENT = 'REMOVE_COMMENT';
-const THUMB_UP_COMMENT = 'THUMB_UP_COMMENT';
-const THUMB_DOWN_COMMENT = 'THUMB_DOWN_COMMENT';
+export const ADD_COMMENT = 'ADD_COMMENT';
+export const EDIT_COMMENT = 'EDIT_COMMENT';
+export const REMOVE_COMMENT = 'REMOVE_COMMENT';
+export const THUMB_UP_COMMENT = 'THUMB_UP_COMMENT';
+export const THUMB_DOWN_COMMENT = 'THUMB_DOWN_COMMENT';
 
 function addComment(text) {
     return {
@@ -39,16 +39,14 @@ function delComment(id) {
 function thumbUpComment(id) {
     return {
         type: THUMB_UP_COMMENT,
-        id,
-        rate: +1
+        id
     }
 }
 
 function thumbDownComment(id) {
     return {
         type: THUMB_DOWN_COMMENT,
-        id,
-        rate: -1
+        id
     }
 }
 
